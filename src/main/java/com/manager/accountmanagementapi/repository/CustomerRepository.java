@@ -1,4 +1,4 @@
-package com.manager.accountmanagementapi.service;
+package com.manager.accountmanagementapi.repository;
 
 import com.manager.accountmanagementapi.entity.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;

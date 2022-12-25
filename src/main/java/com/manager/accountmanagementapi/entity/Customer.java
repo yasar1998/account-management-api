@@ -19,7 +19,7 @@ public class Customer {
 
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<Account> accounts = new HashSet<>();
-
+    
     public Customer() {
     }
 
