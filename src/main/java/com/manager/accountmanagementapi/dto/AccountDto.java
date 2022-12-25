@@ -16,6 +16,15 @@ public class AccountDto {
 
     private Set<AccountTransactionDto> accountTransactions;
 
+    public AccountDto(String id, BigDecimal balance, LocalDateTime creationDate,
+                      AccountCustomerDto customerDto, Set<AccountTransactionDto> accountTransactions) {
+        this.id = id;
+        this.balance = balance;
+        this.creationDate = creationDate;
+        this.customerDto = customerDto;
+        this.accountTransactions = accountTransactions;
+    }
+
     public String getId() {
         return id;
     }
