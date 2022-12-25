@@ -23,6 +23,13 @@ public class Customer {
     public Customer() {
     }
 
+    public Customer(String id, String name, String surname, Set<Account> accounts) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.accounts = accounts;
+    }
+
     public Customer(String name, String surname) {
         this.name = name;
         this.surname = surname;

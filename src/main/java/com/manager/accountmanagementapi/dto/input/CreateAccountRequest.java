@@ -1,12 +1,15 @@
 package com.manager.accountmanagementapi.dto.input;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 import java.math.BigDecimal;
 
 public class CreateAccountRequest {
 
+    @NotBlank(message = "Customer id must not be empty")
     private String customerId;
-
-    private BigDecimal balance;
+    @Min(value = 0, message = "Initial Credit must not be negative value")
+    private BigDecimal initialCredit;
 
     public String getCustomerId() {
         return customerId;
@@ -16,11 +19,11 @@ public class CreateAccountRequest {
         this.customerId = customerId;
     }
 
-    public BigDecimal getBalance() {
-        return balance;
+    public BigDecimal getInitialCredit() {
+        return initialCredit;
     }
 
-    public void setBalance(BigDecimal balance) {
-        this.balance = balance;
+    public void setInitialCredit(BigDecimal initialCredit) {
+        this.initialCredit = initialCredit;
     }
 }

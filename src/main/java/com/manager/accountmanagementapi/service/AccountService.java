@@ -34,18 +34,17 @@ public class AccountService {
 
         Customer customer = customerService.getCustomerById(createAccountRequest.getCustomerId());
 
-        Account account = new Account(createAccountRequest.getBalance(), LocalDateTime.now(), customer);
+        Account account = new Account(createAccountRequest.getInitialCredit(), LocalDateTime.now(), customer);
 
-        if(createAccountRequest.getBalance().compareTo(BigDecimal.ZERO) > 0){
+        if(createAccountRequest.getInitialCredit().compareTo(BigDecimal.ZERO) > 0){
             Transaction transaction = new Transaction(TransactionType.INITIAL,
-                    createAccountRequest.getBalance(),
+                    createAccountRequest.getInitialCredit(),
                     LocalDateTime.now(),
                     account);
 
             account.getTransactions().add(transaction);
-
-            accountRepository.save(account);
         }
+        accountRepository.save(account);
         return converter.convertToAccountDto(account);
     }
 }
