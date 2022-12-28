@@ -29,6 +29,13 @@ public class Transaction {
     public Transaction() {
     }
 
+    public Transaction(String id, TransactionType transactionType, BigDecimal amount, LocalDateTime transactionDate) {
+        this.id = id;
+        this.transactionType = transactionType;
+        this.amount = amount;
+        this.transactionDate = transactionDate;
+    }
+
     public Transaction(TransactionType transactionType, BigDecimal amount, LocalDateTime transactionDate, Account account) {
         this.transactionType = transactionType;
         this.amount = amount;

@@ -11,6 +11,11 @@ public class CreateAccountRequest {
     @Min(value = 0, message = "Initial Credit must not be negative value")
     private BigDecimal initialCredit;
 
+    public CreateAccountRequest(String customerId, BigDecimal initialCredit) {
+        this.customerId = customerId;
+        this.initialCredit = initialCredit;
+    }
+
     public String getCustomerId() {
         return customerId;
     }

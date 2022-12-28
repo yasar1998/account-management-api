@@ -32,6 +32,15 @@ public class Account {
     public Account() {
     }
 
+    public Account(String id, BigDecimal balance, LocalDateTime creationDate, Customer customer,
+                   Set<Transaction> transactions) {
+        this.id = id;
+        this.balance = balance;
+        this.creationDate = creationDate;
+        this.customer = customer;
+        this.transactions = transactions;
+    }
+
     public Account(BigDecimal balance, LocalDateTime creationDate) {
         this.balance = balance;
         this.creationDate = creationDate;

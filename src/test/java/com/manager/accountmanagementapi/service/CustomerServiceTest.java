@@ -12,6 +12,7 @@ import org.mockito.Mockito;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -85,6 +86,7 @@ class CustomerServiceTest {
                         new CustomerDto("id1", "name1", "surname1", Set.of()));
 
         Mockito.when(customerRepository.findAll()).thenReturn(customerList);
+
         Mockito.when(converter.convertToCustomerDto(customerList.get(0))).thenReturn(customerDtoList.get(0));
         Mockito.when(converter.convertToCustomerDto(customerList.get(1))).thenReturn(customerDtoList.get(1));
 
