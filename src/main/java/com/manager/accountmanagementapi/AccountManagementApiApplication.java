@@ -25,7 +25,5 @@ public class AccountManagementApiApplication implements CommandLineRunner {
 		Customer customer1 = new Customer("Elvin", "Memmedov");
 		customerRepository.save(customer);
 		customerRepository.save(customer1);
-
-		System.out.println(customer.getId());
 	}
 }
