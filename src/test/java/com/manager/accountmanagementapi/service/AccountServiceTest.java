@@ -3,7 +3,6 @@ package com.manager.accountmanagementapi.service;
 import com.manager.accountmanagementapi.dto.AccountCustomerDto;
 import com.manager.accountmanagementapi.dto.AccountDto;
 import com.manager.accountmanagementapi.dto.AccountTransactionDto;
-import com.manager.accountmanagementapi.dto.CustomerDto;
 import com.manager.accountmanagementapi.dto.converter.AccountDtoConverter;
 import com.manager.accountmanagementapi.dto.input.CreateAccountRequest;
 import com.manager.accountmanagementapi.entity.Account;
@@ -14,7 +13,6 @@ import com.manager.accountmanagementapi.exception.CustomerNotFoundException;
 import com.manager.accountmanagementapi.repository.AccountRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
 import org.mockito.Mockito;
 
 import java.math.BigDecimal;
