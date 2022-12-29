@@ -9,9 +9,12 @@
 ### Validation
 - Customer Id must not be blank and Initial amount must not be negative
 
-## Test and Run with Maven
+## Test and Run in IDE
 1. To run the project: *mvn spring-boot:run*
 2. To run the tests: *mvn clean test*
+
+## Run with Docker
+1. Issue command: *docker-compose up*
 
 
 ## Technologies
@@ -23,7 +26,8 @@
 - Unit Tests with JUnit and Mockito
 - Integration Tests with MockMvc
 - Docker (Docker-compose)
-- PostgreSQL database
+- PostgreSQL database (Docker container)
+- H2 Database (testing purposes)
 
 
 ### REST endpoints
