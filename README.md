@@ -14,7 +14,8 @@
 2. To run the tests: *mvn clean test*
 
 ## Run with Docker
-1. Issue command: *docker-compose up*
+Step 1. mvn clean package (clean JAR creation)
+Step 2. docker-compose up
 
 
 ## Technologies
